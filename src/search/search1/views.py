@@ -7,6 +7,7 @@ from search1.serializers import FoodSerializer
 
 # Create your views here.
 class FoodAPIView(generics.ListCreateAPIView):
+    search_fields = ['name', 'price']
     filter_backends = (filters.SearchFilter, )
     queryset = Food.objects.all()
     serializer_class = FoodSerializer
