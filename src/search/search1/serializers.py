@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from search1.models import  Question, Food
+from search1.models import Question, Food
 
 
 class QuestionSerializer(serializers.ModelSerializer):
@@ -11,4 +11,3 @@ class FoodSerializer(serializers.ModelSerializer):
     class Meta:
         model = Food
         fields = '__all__'
-                 
