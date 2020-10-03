@@ -1,4 +1,6 @@
 
+from django.conf.urls import url
+
 urlpatterns = [
-   path('foods/', views.FoodAPIView.as_view()),
+   url('foods/', views.FoodAPIView.as_view()),
 ]
