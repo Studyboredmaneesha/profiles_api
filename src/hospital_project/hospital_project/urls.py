@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from hospital_management import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url('Patient/', views.PatientAPIView.as_view()),
 ]

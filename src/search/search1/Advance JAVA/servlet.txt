@@ -1,0 +1,32 @@
+package servletdemo1;
+
+import java.io.IOException;
+
+public class Servletdemo implements Servlet {
+public Servletdemo() {
+	System.out.print("servletdemo object is created");
+}
+ServletConfig config;
+public void destroy() {
+	
+	System.out.println("method id executed");
+	
+}
+public ServletConfig getServletConfig() {
+	return config;
+	
+	
+}
+
+public String getServletInfo() {
+	return "servlet demo";
+}
+public void init(ServletConfig config) throws ServletException{
+	this.config=config;
+	System.out.println("init executed");
+}
+public void service(ServletRequest arg0,ServletResponse arg1)throws ServletException,IOException{
+	System.out.println("service excuted");
+	
+}
+}
